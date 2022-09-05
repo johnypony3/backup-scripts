@@ -1,0 +1,40 @@
+.DS_Store
+*.cache
+*.DS_Store
+*.musiclibrary
+*.photoslibrary
+*/.build/
+*/.cache/*
+*/.DocumentRevisions-V100/
+*/.DS_Store
+*/.fseventsd/
+*/.idea/
+*/.MobileBackups.trash/
+*/.MobileBackups/
+*/.npm
+*/.platformio/*
+*/.Spotlight-V100/
+*/.TemporaryItems/
+*/.Trash/*
+*/*.log
+*/builds/*
+*/cache/*
+*/Cache/*
+*/caches/*
+*/Cashes/*
+*/CrashReporter/
+*/DerivedData/
+*/extensions/*
+*/iTunes/Album\ Artwork/
+*/iTunes/iTunes\ Media/Downloads/
+*/iTunes/iTunes\ Media/Podcasts/
+*/iTunes/Previous\ iTunes\ Libraries/
+*/Library/*
+*/Logs/
+*/MobileSync/Backup/
+*/node_modules/
+*/packages/*
+*/Trash/*
+*/vendor/
+*node_modules
+*Trash*

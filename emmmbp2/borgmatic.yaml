@@ -1,0 +1,10 @@
+<<: !include ../common/config.yaml
+
+location:
+  source_directories:
+    - /Users/edward
+  repositories:
+    - /Volumes/Drobo5N/drb131601a00539/1/dev-backup/emmmbp2
+
+storage:
+  encryption_passcommand: cat ~/.config/secrets/emmmb2-borg-key
