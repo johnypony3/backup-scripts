@@ -1,6 +1,6 @@
 location:
   exclude_from:
-    - ../excludes/exclude-standard
+    - excludes/exclude-standard
   exclude_caches: true
   exclude_if_present:
     - .nobackup
@@ -9,7 +9,7 @@ storage:
   compression: lz4
   retries: 3
   retry_wait: 10
-  archive_name_format: "{hostname}-{now}"
+  archive_name_format: "(hostname)-(now)"
 
 retention:
   keep_within: 3H
@@ -18,7 +18,7 @@ retention:
   keep_weekly: 4
   keep_monthly: 6
   keep_yearly: 0
-  prefix: sourcehostname
+  prefix: "(hostname)-(now)"
 
 hooks:
   before_backup:

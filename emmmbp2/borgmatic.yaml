@@ -6,5 +6,6 @@ location:
   repositories:
     - /Volumes/Drobo5N/drb131601a00539/1/dev-backup/emmmbp2
 
-storage:
-  encryption_passcommand: cat ~/.config/secrets/emmmb2-borg-key
+# storage:
+#   encryption_passphrase: "$(</Users/edward/.config/secrets/emmmb2-borg-key)"
+#borg_config_directory: ../common/
