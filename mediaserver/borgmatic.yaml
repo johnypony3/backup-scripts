@@ -5,6 +5,3 @@ location:
     - /mediaserver
   repositories:
     - /mnt/nas_dev_backup/mediaserver
-
-storage:
-  encryption_passcommand: cat ~/.config/secrets/mediaserver-borg-key
