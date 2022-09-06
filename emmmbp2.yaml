@@ -4,4 +4,4 @@ location:
   source_directories:
     - /Users/edward
   repositories:
-    - /Volumes/Drobo5N/drb131601a00539/1/dev-backup/emmmbp2
+    - /mnt/nas_dev_backup/emmmbp2
