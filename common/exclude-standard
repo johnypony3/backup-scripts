@@ -38,3 +38,4 @@
 */vendor/
 *node_modules
 *Trash*
+*secrets*
