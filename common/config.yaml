@@ -1,6 +1,6 @@
 location:
   exclude_from:
-    - excludes/exclude-standard
+    - common/exclude-standard
   exclude_caches: true
   exclude_if_present:
     - .nobackup

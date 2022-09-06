@@ -1,7 +1,8 @@
-<<: !include ../common/config.yaml
+<<: !include common/config.yaml
 
 location:
   source_directories:
+    - /home/edward
     - /mediaserver
   repositories:
     - /mnt/nas_dev_backup/mediaserver
