@@ -12,6 +12,6 @@ common/install.sh
 
 export BORG_PASSCOMMAND="security find-generic-password -w -s borg -a borg"
 
-borgmatic create -c $BORG_CONFIG.yaml --progress --stats --list
+borgmatic create -c ../configs/$BORG_CONFIG.yaml --progress --stats --list
 
 set +o allexport

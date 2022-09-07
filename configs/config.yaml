@@ -1,6 +1,6 @@
 location:
   exclude_from:
-    - common/exclude-standard
+    - ../common/exclude-standard
   exclude_caches: true # CACHEDIR.TAG
   exclude_if_present:
     - .nobackup
