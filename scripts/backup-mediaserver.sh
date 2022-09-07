@@ -7,8 +7,10 @@ export BORG_CONFIG=mediaserver
 
 cd $CWD
 
-common/install.sh
+common/install.sh; . common/.cron-env;
 
-borgmatic create -c ../configs/$BORG_CONFIG.yaml --progress --stats --list --monitoring-verbosity 2 --log-file $HOME/log/backup.log
+echo "BORG_CONFIG_FILE:$BORG_CONFIG_FILE"
+
+borgmatic create -c $BORG_CONFIG_FILE --progress --stats --list --monitoring-verbosity 2 --log-file $HOME/log/backup.log
 
 set +o allexport

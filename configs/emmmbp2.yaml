@@ -1,4 +1,4 @@
-<<: !include common/config.yaml
+<<: !include config.yaml
 
 location:
   source_directories:

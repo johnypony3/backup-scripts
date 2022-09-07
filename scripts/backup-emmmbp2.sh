@@ -8,10 +8,12 @@ export BORG_CONFIG=emmmbp2
 
 cd $CWD
 
-common/install.sh
+common/install.sh; . common/.cron-env;
 
 export BORG_PASSCOMMAND="security find-generic-password -w -s borg -a borg"
 
-borgmatic create -c ../configs/$BORG_CONFIG.yaml --progress --stats --list
+echo "BORG_CONFIG_FILE:$BORG_CONFIG_FILE"
+
+borgmatic create -c $BORG_CONFIG_FILE --progress --stats --list
 
 set +o allexport
