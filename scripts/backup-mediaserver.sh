@@ -2,13 +2,12 @@
 
 set -o allexport
 
+export CWD=$HOME/backup-scripts
 export BORG_CONFIG=mediaserver
-
-. $HOME/.cron-env
 
 cd $CWD
 
-git checkout main; git pull;
+common/install.sh
 
 borgmatic create -c $BORG_CONFIG.yaml --progress --stats --list --monitoring-verbosity 2 --log-file $HOME/log/backup.log
 
