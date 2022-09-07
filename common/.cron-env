@@ -1,4 +1,4 @@
-export BORG_PASSCOMMAND="cat $HOME/.config/secrets/$BORG_CONFIG-borg-key"
+export BORG_PASSCOMMAND="cat $HOME/.config/secrets/borg"
 export BORG_BASE_DIR=$HOME/.config/borg
 export BORG_SECURITY_DIR=$HOME/.config/borg/security
 export BORG_KEYS_DIR==$HOME/.config/borg/keys

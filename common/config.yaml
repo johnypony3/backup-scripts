@@ -1,15 +1,18 @@
 location:
   exclude_from:
     - common/exclude-standard
-  exclude_caches: true
+  exclude_caches: true # CACHEDIR.TAG
   exclude_if_present:
     - .nobackup
+  repositories:
+    - /Users/edward/Volumes/borg
 
 storage:
   compression: lz4
   retries: 3
   retry_wait: 10
   archive_name_format: "{hostname}-{now}"
+  relocated_repo_access_is_ok: true
 
 retention:
   keep_within: 3H
@@ -20,33 +23,12 @@ retention:
   keep_yearly: 0
   prefix: "{hostname}-{now}"
 
+consistency:
+  checks:
+    - name: repository
+    - name: archives
+      frequency: 2 weeks
+
 hooks:
-  before_backup:
-    - echo "Starting a backup."
-
-  before_prune:
-    - echo "Starting pruning."
-
-  before_compact:
-    - echo "Starting compaction."
-
-  before_check:
-    - echo "Starting checks."
-
-  after_backup:
-    - echo "Finished a backup."
-
-  after_compact:
-    - echo "Finished compaction."
-
-  after_prune:
-    - echo "Finished pruning."
-
-  after_check:
-    - echo "Finished checks."
-
-  after_extract:
-    - echo "Finished extracting."
-
-  on_error:
-    - echo "Error during prune/compact/create/check."
+  after_actions:
+    - borg with-lock /Users/edward/Volumes/borg aws s3 sync /Users/edward/Volumes/borg s3://borg-home --delete

@@ -4,5 +4,24 @@ location:
   source_directories:
     - /home/edward
     - /mediaserver
-  repositories:
-    - /mnt/nas_dev_backup/mediaserver
+
+storage:
+  compression: lz4
+  retries: 0
+
+hooks:
+  before_backup:
+    - echo 'containers stop'
+    - cd /mediaserver; docker-compose stop;
+
+  after_backup:
+    - echo 'containers start'
+    - cd /mediaserver; docker-compose start;
+
+  after_actions:
+    - echo 'containers start'
+    - cd /mediaserver; docker-compose start;
+
+  on_error:
+    - echo 'containers start'
+    - cd /mediaserver; docker-compose start;
