@@ -5,7 +5,6 @@ location:
   exclude_if_present:
     - .nobackup
   repositories:
-    - /Users/edward/Volumes/borg
 
 storage:
   compression: lz4
@@ -31,4 +30,4 @@ consistency:
 
 hooks:
   after_actions:
-    - borg with-lock /Users/edward/Volumes/borg aws s3 sync /Users/edward/Volumes/borg s3://borg-home --delete
+    - borg with-lock ${BORG_REPO} aws s3 sync ${BORG_REPO} s3://borg-home --delete
