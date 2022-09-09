@@ -4,6 +4,7 @@ location:
   source_directories:
     - /home/edward
     - /mediaserver
+    - /etc/netplan
 
 storage:
   compression: lz4
