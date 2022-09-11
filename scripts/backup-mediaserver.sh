@@ -2,7 +2,7 @@
 
 set -o allexport
 
-export CWD=$HOME/backup-scripts
+export CWD=$HOME/git/backup-scripts
 export BORG_CONFIG=mediaserver
 export BORG_PASSCOMMAND="cat $HOME/.config/secrets/borg"
 
