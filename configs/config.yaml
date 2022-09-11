@@ -31,4 +31,4 @@ consistency:
 
 hooks:
   after_actions:
-    - borg with-lock ${BORG_REPO} aws s3 sync ${BORG_REPO} s3://borg-home --delete
+    - borg with-lock ${BORG_REPO} aws s3 sync ${BORG_REPO} s3://borg-home --delete --profile worker

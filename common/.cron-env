@@ -1,6 +1,5 @@
-export BORG_PASSCOMMAND="cat $HOME/.config/secrets/borg"
 export BORG_BASE_DIR=$HOME/.config/borg
 export BORG_SECURITY_DIR=$HOME/.config/borg/security
 export BORG_KEYS_DIR=$HOME/.config/borg/keys
-export BORG_CONFIG_FILE=$HOME/backup-scripts/configs/$BORG_CONFIG.yaml
+export BORG_CONFIG_FILE=$CWD/configs/$BORG_CONFIG.yaml
 export BORG_REPO=/Users/edward/Volumes/borg

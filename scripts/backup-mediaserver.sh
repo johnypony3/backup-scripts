@@ -4,10 +4,12 @@ set -o allexport
 
 export CWD=$HOME/backup-scripts
 export BORG_CONFIG=mediaserver
+export BORG_PASSCOMMAND="cat $HOME/.config/secrets/borg"
 
 cd $CWD
 
 common/install.sh; . common/.cron-env;
+
 
 echo "BORG_CONFIG_FILE:$BORG_CONFIG_FILE"
 
