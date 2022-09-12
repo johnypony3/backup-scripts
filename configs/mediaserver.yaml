@@ -11,14 +11,6 @@ storage:
   retries: 0
 
 hooks:
-  before_backup:
-    - echo 'containers stop'
-    - cd /mediaserver; docker-compose stop;
-
-  after_backup:
-    - echo 'containers start'
-    - cd /mediaserver; docker-compose start;
-
   after_actions:
     - echo 'containers start'
     - cd /mediaserver; docker-compose start;
