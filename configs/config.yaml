@@ -4,8 +4,11 @@ location:
   exclude_caches: true # CACHEDIR.TAG
   exclude_if_present:
     - .nobackup
+    - .noemmmb2
+    - .nomediaserver
   repositories:
     - ${BORG_REPO}
+  one_file_system: true
 
 storage:
   compression: lz4
