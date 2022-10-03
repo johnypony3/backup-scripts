@@ -5,6 +5,7 @@ location:
     - /home/edward
     - /mediaserver
     - /etc/netplan
+    - /etc/docker
 
 storage:
   compression: lz4
