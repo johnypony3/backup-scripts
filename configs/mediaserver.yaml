@@ -6,6 +6,7 @@ location:
     - /mediaserver
     - /etc/netplan
     - /etc/docker
+    - /etc/security
 
 storage:
   compression: lz4
